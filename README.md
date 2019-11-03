@@ -67,6 +67,7 @@ Restart your Raspberry to activate your configuration and changes
    * select the entry `Interface Option` 
    * select the entry `VNC`
    * to enable VNC and follow the information displayed
+   * Now you can use the integrated `vnc connect from RealVNC`, if you want to use tightvnc see the section below
 
 ## Install additonal tools
 
@@ -81,7 +82,7 @@ The browser `iceweasel` has been depricated and you need to install the `firefox
 1. sudo apt-get update
 2. sudo apt-get install firefox-esr
 
-**Tight VNC server**
+**Tight VNC server as an option to the integrated vnc connect by RealVNC**
 * sudo apt-get install tightvncserver
 * tightvncserver (initialisation)
     * Would you like to enter a view-only password (y/n)?
