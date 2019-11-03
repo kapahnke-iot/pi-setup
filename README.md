@@ -4,7 +4,10 @@ This repository contains the basic setup description for my Raspberry Pi's.
 
 ## Download the image
 
-Go to the Raspberry Pi org website  https://www.raspberrypi.org/downloads/raspbian/ and you will find a variety of available images, even Third Party images. Select the one that is fitting best to your project, I used the Raspian and the Raspberry Pi Desktop images. 
+Go to the Raspberry Pi org website  https://www.raspberrypi.org/downloads/raspbian/ and you will find a variety of available images, even Third Party images. Select the one that is fitting best to your project. 
+
+I used the Raspian and the Raspberry Pi Desktop images. 
+
 To deploy the image on the SD-Card I am using the `balenaetcher` application, but there are plenty of tools available to deploy the image.
 
 ## Mandatory steps to keep your Pi safe and ready to use
@@ -32,7 +35,7 @@ Depending on your selection the installation of the required language might take
 
 ### Change the default password for the `pi`user account 
 
-The default password is `raspberry`and well known in the Pi community and hacker community! 
+The default password is `raspberry`and well known in the Pi community and hacker community and highly recommended to change prior going live!
 
 ### Select the Wifi network  
 
@@ -71,6 +74,7 @@ Restart your Raspberry to activate your configuration and changes
 2. sudo apt-get install vim -y
 
 **Browser**
+
 The browser `iceweasel` has been depricated and you need to install the `firefox-esr` version. 
 
 1. sudo apt-get update
@@ -107,7 +111,9 @@ for a an update first pull the remote master to your local directory
 * git pull
 
 https://help.github.com/articles/about-readmes/
+
 http://kbroman.org/github_tutorial/pages/init.html
+
 http://kbroman.org/github_tutorial/pages/routine.html
 
 
