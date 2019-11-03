@@ -31,6 +31,7 @@ I prefer to use the batch job listed below to update, upgrade and restart my Pi,
 ### Set the country, language and timezone
 
 Use the command `sudo dpkg-reconfigure tzdata` 
+
 Depending on your selection the installation of the required language might take some minutes. 
 
 ### Change the default password for the `pi`user account 
@@ -92,6 +93,7 @@ The browser `iceweasel` has been depricated and you need to install the `firefox
     * Tab Interfaces
     * Enable VNC
 * Integrate into your profile shell script 
+
 **The following section is under construction!!**
 
 **GIT installation**
