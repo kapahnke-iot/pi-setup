@@ -56,7 +56,7 @@ Restart your Raspberry to activate your configuration and changes
 
 * Via Console
    * in the terminal session enter the command `sudo raspi-config` , 
-   * select the entry `Interface Option` 
+   * select the entry `Interface Options` 
    * select the Entry `SSH` 
    * to enable SSH and follow the information displayed
    
@@ -64,10 +64,18 @@ Restart your Raspberry to activate your configuration and changes
 
 * Via Console
    * in the terminal session enter the command `sudo raspi-config` , 
-   * select the entry `Interface Option` 
+   * select the entry `Interface Options` 
    * select the entry `VNC`
    * to enable VNC and follow the information displayed
    * Now you can use the integrated `vnc connect from RealVNC`, if you want to use tightvnc see the section below
+
+## Resize root partition
+
+* Via Console
+   * in the terminal session enter the command `sudo raspi-config` , 
+   * select the entry `Advanced Options` 
+   * select the entry `Expand filesystem`
+   * follow the information displayed, you have to reboot the Raspberry that the change will be activated.
 
 ## Install additonal tools
 
@@ -94,6 +102,16 @@ The browser `iceweasel` has been depricated and you need to install the `firefox
     * Tab Interfaces
     * Enable VNC
 * Integrate into your profile shell script 
+
+## FHEM installation
+
+`sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get autoremove -y && sudo reboot`
+
+Now run the following command, just copied from the FHEM-WIKI , to install FHEM, configure that FHEM will be started after ever Raspberry Pi reboot and install additonal required modules:
+
+` wget -qO - https://debian.fhem.de/archive.key | sudo apt-key add - && echo "deb https://debian.fhem.de/stable ./" | sudo tee -a /etc/apt/sources.list && sudo apt-get -y install apt-transport-https && sudo apt-get update && sudo apt-get -y install fhem `
+
+The FHEM web interface is now available at, i.e.  `http:192.168.178.84:8083`. Be aware that the IP-address of your Raspberry depends on your network setup!
 
 **The following section is under construction!!**
 
