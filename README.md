@@ -107,11 +107,18 @@ The browser `iceweasel` has been depricated and you need to install the `firefox
 
 `sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get autoremove -y && sudo reboot`
 
-Now run the following command, just copied from the FHEM-WIKI , to install FHEM, configure that FHEM will be started after ever Raspberry Pi reboot and install additonal required modules:
+Ensure that you have `resized the root partition!` , see section above. 
 
-` wget -qO - https://debian.fhem.de/archive.key | sudo apt-key add - && echo "deb https://debian.fhem.de/stable ./" | sudo tee -a /etc/apt/sources.list && sudo apt-get -y install apt-transport-https && sudo apt-get update && sudo apt-get -y install fhem `
+* Install the prerequisites for FHEM:
 
-The FHEM web interface is now available at, i.e.  `http:192.168.178.84:8083`. Be aware that the IP-address of your Raspberry depends on your network setup!
+`sudo apt-get -f install && sudo apt-get install perl libdevice-serialport-perl libio-socket-ssl-perl libwww-perl libxml-simple-perl libjson-perl sqlite3 libdbd-sqlite3-perl libtext-diff-perl -y`
+
+* Now download and install the latest FHEM version:
+Find out the latest FHEM version here https://fhem.de/fhem.html#Download . In the sample below is 5.9 the current version.
+
+`sudo wget http://fhem.de/fhem-5.9.deb && sudo dpkg -i fhem-5.9.deb` 
+
+If the installation was successful you can use the FHEM web interface at i.e.  `http:192.168.178.84:8083`. Be aware that the IP-address of your Raspberry depends on your network setup!
 
 **The following section is under construction!!**
 
