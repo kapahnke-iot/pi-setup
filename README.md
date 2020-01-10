@@ -67,7 +67,11 @@ Restart your Raspberry to activate your configuration and changes
    * select the entry `Interface Options` 
    * select the entry `VNC`
    * to enable VNC and follow the information displayed
-   * Now you can use the integrated `vnc connect from RealVNC`, if you want to use tightvnc see the section below
+   * On the command line perform following steps
+    * `sudo vncpasswd -service `, enter the service password
+    * create in the directory `/etc/vnc/config.d`the file `common.custom` and add  the line `Authentication=VncAuth` 
+    * run `sudo systemctl restart vncserver-x11-serviced`
+   * Now you can use the integrated `vnc connect from RealVNC`, if you want to use tightvnc see the section further below.
 
 ## Resize root partition
 
