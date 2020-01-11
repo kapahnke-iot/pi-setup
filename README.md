@@ -118,8 +118,8 @@ The browser `iceweasel` has been depricated and you need to install the `firefox
 
 * Now download and install the latest FHEM version:
 Find out the latest FHEM version here https://fhem.de/fhem.html#Download . In the sample below is 5.9 the current version.
-
-`sudo wget http://fhem.de/fhem-5.9.deb && sudo dpkg -i fhem-5.9.deb` 
+ 
+ `sudo wget http://fhem.de/fhem-5.9.deb && sudo dpkg -i fhem-5.9.deb` 
 
 * If the installation was successful remove the install packages `sudo rm fhem-5.9.deb`
 * Set the required access rights for FHEM:
@@ -139,7 +139,23 @@ it will take some seconds after a vanilla install to create the backup. The back
 * to activate the changes you have to restart FHEM: `shutwdown restart`
 * enable the option to edit configuration by entering the follwing command on the FHEM console: `attr WEB editConfig 1`, save the configuration and restart FHEM. Now you are able to edit the fhem.cfg file!
 
+### Configure remote access
 
+Enable the remote access of the FHEM web interface with the following steps: 
+* Userid and password
+  Assuming that the userid has been created already. Create the required userid and password combination:
+  `echo -n youruserid:yourpassword | base64`
+  The _output_ is required in the next step.
+* Add the remote login configuration in fhem.cfg
+   * Edit files --> select fhem.cfg
+   * Add the following lines
+   `define WEBphone FHEMWEB 8084 global` portnumber can be different
+   `attr WEBphone stylesheetPrefix smallscreen`
+   `attr WEBphone basicAuth _output_`  use the output you have created with the userid/password combination creation.
+   * Save fhem.cfg
+   * Run in the FHEM console `shutdown restart`
+* http://192.168.178.XX:8084  your IP and port number configuration might be different
+   
 
 ## The following section is under construction!!
 
