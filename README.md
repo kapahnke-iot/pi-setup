@@ -137,6 +137,7 @@ Find out the latest FHEM version here https://fhem.de/fhem.html#Download . In th
 it will take some seconds after a vanilla install to create the backup. The backup will be created in the background and you need to verify in the log files that the backup has been created. 
 * Start the FHEM update in the FHEM console: `update`, this may take a while.
 * to activate the changes you have to restart FHEM: `shutwdown restart`
+* enable the option to edit configuration by entering the follwing command on the FHEM console: `attr WEB editConfig 1`, save the configuration and restart FHEM. Now you are able to edit the fhem.cfg file!
 
 
 
