@@ -107,7 +107,9 @@ The browser `iceweasel` has been depricated and you need to install the `firefox
     * Enable VNC
 * Integrate into your profile shell script 
 
-## FHEM installation
+## FHEM 
+
+### Installation
 
 * update the system: `sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get autoremove -y && sudo reboot`
 * Ensure that you have `resized the root partition!` , see section above. 
@@ -128,6 +130,15 @@ Find out the latest FHEM version here https://fhem.de/fhem.html#Download . In th
    * sudo reboot
    
 * Now you can use the FHEM web interface at i.e.  `http:192.168.178.84:8083`. Be aware that the IP-address of your Raspberry depends on your network setup!
+
+### First steps in FHEM
+
+* create a backup, enter in the FHEM console: `backup` and press enter, 
+it will take some seconds after a vanilla install to create the backup. The backup will be created in the background and you need to verify in the log files that the backup has been created. 
+* Start the FHEM update in the FHEM console: `update`, this may take a while.
+* to activate the changes you have to restart FHEM: `shutwdown restart`
+
+
 
 ## The following section is under construction!!
 
