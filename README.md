@@ -154,7 +154,7 @@ Enable the remote access of the FHEM web interface with the following steps:
    `attr WEBphone basicAuth _output_`  use the output you have created with the userid/password combination creation.
    * Save fhem.cfg
    * Run in the FHEM console `shutdown restart`
-* http://192.168.178.XX:8084  your IP and port number configuration might be different
+* Now you can open the FHEM console from remote, use  http://192.168.178.XX:8084 , your IP and port number configuration might be different
    
 
 ## The following section is under construction!!
